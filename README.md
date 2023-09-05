@@ -6,7 +6,7 @@
 
 
 
-\## Introduction
+## **Introduction**
 
 In today's digital age, verifying the identity of individuals has become a critical concern for businesses and organizations. Traditional methods such as captcha and one-time password (OTP) verification have been used, but they are not foolproof and can be easily circumvented. To address this issue, various methodologies have been deployed, including physical verification and video conferencing methods. However, these methods have limitations and may not provide the desired level of security.
 
