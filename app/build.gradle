@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'vijay.vlr2k2.myapplicationartrial7'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "vijay.vlr2k2.myapplicationartrial7"
@@ -26,6 +26,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildToolsVersion '34.0.0'
 }
 
 dependencies {
@@ -45,6 +46,6 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:32.2.3')
     implementation 'com.google.android.gms:play-services-vision:20.1.3'
 
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-ml-vision:24.1.0'
+    implementation ('com.google.firebase:firebase-analytics')
+    implementation ('com.google.firebase:firebase-ml-vision:24.0.3')
 }

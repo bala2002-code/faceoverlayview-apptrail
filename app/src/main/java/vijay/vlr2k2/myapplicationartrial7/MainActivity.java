@@ -3,7 +3,9 @@ package vijay.vlr2k2.myapplicationartrial7;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.view.PixelCopy;
 import android.view.View;
@@ -144,13 +146,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void placeARTextOnDetectedFace(String text, FirebaseVisionFace face) {
-        float[] facePos = face.getBoundingBoxCenter();
+        Rect re = face.getBoundingBox();
+
+        float[] facePos = getBoundingBoxCenter(face);
         float poseX = facePos[0];
         float poseY = facePos[1];
         float poseZ = facePos[2];
         float poseScale = face.getBoundingBox().width() * 1.5f; // Adjust scale as needed
-
-        Pose pose = new Pose(poseX, poseY, poseZ, 0.0f, 0.0f, 0.0f, 0.0f);
+        Pose pose = Pose.makeTranslation(poseX, poseY, poseZ);
+//        Pose pose = new Pose(poseX, poseY, poseZ, 0.0f, 0.0f, 0.0f, 0.0f);
         Anchor anchor = arFragment.getArSceneView().getSession().createAnchor(pose);
         ViewRenderable.builder()
                 .setView(this, createTextViewOnFace(text))
@@ -160,6 +164,13 @@ public class MainActivity extends AppCompatActivity {
                     anchorNode.setRenderable(viewRenderable);
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
                 });
+    }
+    float[] getBoundingBoxCenter(FirebaseVisionFace face) {
+        Rect re = face.getBoundingBox();
+        float centerX = re.centerX();
+        float centerY = re.centerY();
+        float centerZ = 0.0f; // Assume the face is on the same plane as the camera
+        return new float[]{centerX, centerY, centerZ};
     }
 
 }
