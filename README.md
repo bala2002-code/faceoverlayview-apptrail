@@ -1,4 +1,4 @@
-# faceoverlayview-apptrail
+# A Face Recognition Project
 
 # **A Secured Blockchain-Based Facial Recognition System for Two-Factor Authentication Process**
 ![](Aspose.Words.17f8149a-1a3c-41dc-ba08-8b08e0b24d5a.001.jpeg)
