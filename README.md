@@ -958,6 +958,9 @@ MetaFace: An open-source framework for building face recognition applications wi
 
 AR-based face recognition systems have the potential to revolutionize various applications, from security and access control to personalized experiences and augmented reality overlays. However,  the  successful  development  and  deployment  of  these  systems  require  careful consideration  of  several  factors,  including  accuracy,  robustness,  user  experience, computational  efficiency,  privacy  considerations,  and  benchmarking.By  addressing  these challenges and continuously innovating, AR-based face recognition systems can unlock new possibilities for enhancing human-computer interaction and enabling a more immersive and personalized digital world. 
 
+**Git Link:**
+[https://github.com/VijayVIT2k2/Face-Detection-App.git](https://github.com/VijayVIT2k2/Face-Detection-App.git)
+
 **References:** 
 
 1. Ahmed, A., & Shahzad, A. (2020). A Review of Augmented Reality Based Face Recognition. International Journal of Applied Engineering Research, 15(10), 21014- 21021. [https://www.researchgate.net/publication/264179697_Implementing_Augmented_Re ality_By_Using_Face_Detection_Recognition_And_Motion_Tracking ](https://www.researchgate.net/publication/264179697_Implementing_Augmented_Reality_By_Using_Face_Detection_Recognition_And_Motion_Tracking)
